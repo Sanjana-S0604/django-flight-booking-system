@@ -1,0 +1,884 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* NAVBAR */
+
+nav{
+    background:linear-gradient(
+        90deg,
+        #1e88ff,
+        #26c6da
+    );
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo-section h2{
+    color:white;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+/*MAIN CONTAINER */
+
+.main-container{
+    width:75%;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,0.08);
+}
+
+/* SEARCH FORM */
+
+.search-form{
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.search-form label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.search-form input{
+    width:300px;
+    padding:12px;
+    border:1px solid #dcdcdc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.search-form button{
+    background:#1e88ff;
+    color:white;
+    border:none;
+    padding:13px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.search-form button:hover{
+    background:#1565c0;
+}
+
+/* HEADING */
+
+h1{
+    text-align:center;
+    color:#003566;
+    margin:40px 0;
+}
+
+/* FLIGHT CARD */
+
+.flight-card{
+    background:white;
+    border-left:6px solid #1e88ff;
+    border-radius:12px;
+
+    padding:25px;
+
+    margin:25px auto;
+
+    width:95%;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flight-left h3{
+    color:#1e88ff;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.flight-left p{
+    margin:8px 0;
+    font-size:17px;
+}
+
+.flight-right{
+    text-align:right;
+}
+
+.flight-right p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.flight-right button{
+    background:#28c840;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.flight-right button:hover{
+    background:#1f9d33;
+}
+
+/* LOGIN & REGISTER */
+
+form{
+    background:white;
+    width:450px;
+    margin:40px auto;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+}
+
+form input{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+form label{
+    font-weight:600;
+}
+
+form button{
+    background:#1e88ff;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+
+/* BOOKING PAGE */
+
+.booking-form{
+    width:900px !important;
+    max-width:95%;
+
+    margin:40px auto;
+
+    background:#f5f8fc;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+    text-align:left;
+}
+
+/* Main Heading */
+
+.booking-title{
+    text-align:center;
+    color:#003566;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+/* Section Headings */
+
+.booking-form h2{
+    color:#1e88ff;
+
+    border-bottom:3px solid #1e88ff;
+
+    padding-bottom:10px;
+
+    margin-bottom:30px;
+
+    margin-top:20px;
+}
+
+/* Labels */
+
+.booking-form label{
+    display:block;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+    margin-bottom:8px;
+}
+
+/* Inputs */
+
+.booking-form input,
+.booking-form select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d6dce5;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    background:white;
+
+    margin-bottom:18px;
+}
+
+/* Readonly flight fields */
+
+.booking-form input[readonly]{
+    background:#ffffff;
+    color:#555;
+}
+
+/* Passenger Section */
+
+.passenger-section{
+    margin-top:40px;
+}
+
+/* Button */
+
+.booking-form button{
+
+    width:100%;
+
+    background:#1f9d33;
+
+    color:white;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+.booking-form button:hover{
+    background:#1f9d33;
+}
+
+
+/* Divider */
+
+.booking-form hr{
+    border:none;
+
+    border-top:2px solid #dbe4f0;
+
+    margin:35px 0;
+}
+
+
+
+/*  BOOKING HISTORY PAGE*/
+
+.history-title{
+    text-align:center;
+    color:#003566;
+    margin:40px 0;
+    font-size:42px;
+}
+
+/* Main Card */
+
+.history-card{
+
+    width:80%;
+
+    margin:25px auto;
+
+    background:white;
+
+    border-left:6px solid #1e88ff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+}
+
+
+.booking-section{
+    flex:1;
+}
+
+/* Headings */
+
+.booking-section h3{
+
+    color:#1e88ff;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+/* Text */
+
+.booking-section p{
+
+    margin:10px 0;
+
+    font-size:18px;
+
+    color:#333;
+}
+
+/* Name Highlight */
+
+.passenger-name{
+
+    color:#1e88ff;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+/* Buttons */
+
+.update-btn,
+.cancel-btn{
+
+    margin-top:20px;
+
+    border:none;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+}
+
+.update-btn{
+    background:#2ecc40;
+}
+
+.update-btn:hover{
+    background:#22a735;
+}
+
+.cancel-btn{
+    background:#2ecc40;
+}
+
+.cancel-btn:hover{
+    background:#22a735;
+}
+
+
+/* LOGIN & REGISTER PAGE */
+
+.auth-title{
+    text-align:center;
+    color:#003566;
+    font-size:42px;
+    margin-top:40px;
+    margin-bottom:25px;
+}
+
+/* Form Container */
+
+.auth-form{
+
+    width:500px;
+    max-width:90%;
+
+    margin:0 auto 40px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+/* Labels */
+
+.auth-form label{
+
+    display:block;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#003566;
+
+    margin-bottom:8px;
+
+    margin-top:15px;
+}
+
+/* Inputs */
+
+.auth-form input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d6dce5;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+.auth-form input:focus{
+
+    border-color:#1e88ff;
+
+    box-shadow:0 0 8px rgba(30,136,255,0.25);
+}
+
+/* Button */
+
+.auth-form button{
+    width:100%;
+    margin-top:25px;
+    background:#2ecc40;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.auth-form button:hover{
+    background:#22a735;
+}
+
+
+/* Bottom Link */
+
+.auth-link{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-size:16px;
+}
+
+.auth-link a{
+
+    color:#1e88ff;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.auth-link a:hover{
+
+    text-decoration:underline;
+}
+
+/* Messages */
+
+.message{
+    width:100%;
+    background:#ffeaea;
+    color:#d63031;
+    padding:12px;
+    margin-bottom:20px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:600;
+    border:1px solid #ffb3b3;
+}
+
+
+
+/* ==========================
+   PROFILE PAGE
+========================== */
+
+.profile-card{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+/* Heading */
+
+.profile-card h1{
+
+    color:#003566;
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+/* Divider */
+
+.profile-card hr{
+
+    border:none;
+
+    border-top:2px solid #e5e7eb;
+
+    margin:20px 0 30px;
+}
+
+/* User Details */
+
+.profile-card h3{
+
+    color:#333;
+
+    text-align:left;
+
+    margin:18px 0;
+
+    font-size:20px;
+
+    font-weight:500;
+}
+
+/* Buttons Container */
+
+.profile-actions{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+/* Buttons */
+
+.profile-actions button{
+
+    background:#2ecc40;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.profile-actions button:hover{
+
+    background:#22a735;
+}
+
+
+/* UPDATE PROFILE PAGE  */
+
+.update-profile-title{
+
+    text-align:center;
+
+    color:#003566;
+
+    font-size:42px;
+
+    margin-top:40px;
+
+    margin-bottom:25px;
+}
+
+.update-profile-form{
+
+    width:500px;
+
+    max-width:90%;
+
+    margin:0 auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.update-profile-form label{
+
+    display:block;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#003566;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+}
+
+.update-profile-form input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d6dce5;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+
+    outline:none;
+}
+
+.update-profile-form input:focus{
+
+    border-color:#1e88ff;
+
+    box-shadow:0 0 8px rgba(30,136,255,0.25);
+}
+
+.update-profile-form button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    background:#2ecc40;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.update-profile-form button:hover{
+
+    background:#22a735;
+}
+
+
+/* CHANGE PASSWORD PAGE  */
+
+.password-title{
+
+    text-align:center;
+
+    color:#003566;
+
+    font-size:42px;
+
+    margin-top:40px;
+
+    margin-bottom:25px;
+}
+
+.password-form{
+
+    width:500px;
+
+    max-width:90%;
+
+    margin:0 auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.password-form label{
+
+    display:block;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#003566;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+}
+
+.password-form input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d6dce5;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+
+    outline:none;
+}
+
+.password-form input:focus{
+
+    border-color:#1e88ff;
+
+    box-shadow:0 0 8px rgba(30,136,255,0.25);
+}
+
+.password-form button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    background:#2ecc40;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.password-form button:hover{
+
+    background:#22a735;
+}

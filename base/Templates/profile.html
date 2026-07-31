@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<center>
+
+    <div class="profile-card">
+        <h1>My Profile </h1>
+
+    <hr>
+
+    <h3>Username : {{request.user.username}}</h3>
+
+    <h3>Email : {{request.user.email}}</h3>
+
+    <h3>First Name : {{request.user.first_name}}</h3>
+
+    <h3>Last Name : {{request.user.last_name}}</h3>
+
+    <br>
+
+    <div class="profile-actions">
+
+        <a href="{% url 'update_profile' %}">
+            <button>Update Profile</button>
+        </a>
+
+        <a href="{% url 'change_password' %}">
+            <button>Change Password</button>
+        </a>
+
+        <a href="{% url 'user_logout' %}">
+            <button>Logout</button>
+        </a>
+
+    </div>
+
+    </div>
+</center>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<h1 class="auth-title">Create Account</h1>
+
+
+<form class="auth-form" method="POST">
+
+    {% csrf_token %}
+
+     {% if messages %}
+    {% for i in messages %}
+        <div class="message">
+            {{ i }}
+        </div>
+    {% endfor %}
+   {% endif %}
+
+    <label>Username</label>
+    <input type="text" name="username" required>
+   
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+
+    <label>First Name</label>
+    <input type="text" name="first_name" required>
+
+
+    <label>Last Name</label>
+    <input type="text" name="last_name" required>
+
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+
+
+    <label>Confirm Password</label>
+    <input type="password" name="confirm_password" required>
+    
+
+    <button type="submit">
+        Register
+    </button>
+
+</form>
+
+<p class="auth-link">
+    Already have an account?
+    <a href="{% url 'user_login' %}">Login</a>
+</p>
+
+
+{% endblock %}

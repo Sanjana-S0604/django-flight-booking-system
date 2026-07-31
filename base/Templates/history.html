@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 class="history-title">Bookings</h1>
+
+{% for i in bookings %}
+
+<div class="history-card">
+
+    <!-- Passenger Details -->
+    <div class="booking-section">
+
+        <h3 class="passenger-name">
+            Name : {{i.name}}
+        </h3>
+
+        <p><b>Aadhaar :</b> {{i.aadhaar}}</p>
+        <p><b>Age :</b> {{i.age}}</p>
+        <p><b>Seat Class :</b> {{i.seat_class}}</p>
+        <p><b>Seat Number :</b> {{i.seat_number}}</p>
+
+        <a href="{% url 'update_booking' i.id %}">
+            <button class="update-btn">
+                Update Details
+            </button>
+        </a>
+
+    </div>
+
+    <!-- Flight Details -->
+    <div class="booking-section">
+
+        <h3>{{i.flight.company}}</h3>
+
+        <p>{{i.flight.flight_name}}</p>
+
+        <p><b>Flight No :</b> {{i.flight.flight_no}}</p>
+
+        <p><b>From :</b> {{i.flight.from_city}}</p>
+
+        <p><b>To :</b> {{i.flight.to_city}}</p>
+
+        <p><b>Email :</b> {{i.email}}</p>
+
+    </div>
+
+    <!-- Travel Details -->
+    <div class="booking-section">
+
+        <p><b>Phone :</b> {{i.phone}}</p>
+
+        <p><b>Departure :</b> {{i.flight.departure}}</p>
+
+        <p><b>Date :</b> {{i.flight.date}}</p>
+
+        <p><b>Price :</b> ₹{{i.flight.price}}</p>
+
+        <a href="{% url 'cancel_booking' i.id %}">
+            <button class="cancel-btn">
+                Cancel Booking
+            </button>
+        </a>
+
+    </div>
+
+</div>
+{% endfor %}
+
+{% endblock %}

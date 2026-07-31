@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+<h1 class="auth-title">Login</h1>
+
+<form class="auth-form" method="POST">
+
+
+<form method="POST">
+
+    {% csrf_token %}
+
+
+       {% if messages %}
+    {% for i in messages %}
+        <div class="message">
+            {{ i }}
+        </div>
+    {% endfor %}
+   {% endif %}
+
+    <label>Username</label>
+    <input type="text" name="username">
+   
+
+    <label>Password</label>
+    <input type="password" name="password">
+
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>
+
+<p class="auth-link">
+    Don't have an account?
+    <a href="{% url 'register' %}">Register</a>
+</p>
+
+
+
+{% endblock %}

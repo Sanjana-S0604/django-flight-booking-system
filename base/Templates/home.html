@@ -1,0 +1,69 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<div class="main-container">
+
+
+<form class="search-form" method="GET">
+
+    <label>From :</label>
+    <input type="text" name="from_city">
+
+    <label>To :</label>
+    <input type="text" name="to_city">
+
+    <button type="submit">
+        Search Flights
+    </button>
+
+</form>
+
+<br><br>
+
+ <h1>Available Flights</h1>
+
+{% for i in flights %}
+
+<div class="flight-card">
+
+    <div class="flight-left">
+
+        <h3>{{i.company}}</h3>
+
+        <p>{{i.flight_name}} | Flight No: {{i.flight_no}}</p>
+
+        <p><b>From:</b> {{i.from_city}}</p>
+
+        <p><b>To:</b> {{i.to_city}}</p>
+
+    </div>
+
+    <div class="flight-right">
+
+        <p><b>Departure:</b> {{i.departure}}</p>
+
+        <p><b>Date:</b> {{i.date}}</p>
+
+        <p><b>Price:</b> ₹{{i.price}}</p>
+
+        <a href="{% url 'booknow' i.id %}">
+            <button>Book Now</button>
+        </a>
+
+    </div>
+
+</div>
+
+{% empty %}
+
+<h3>No Flights Available</h3>
+
+{% endfor %}
+
+</div>
+
+
+
+{% endblock %}
